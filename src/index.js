@@ -9,6 +9,19 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+// Add basic root route for Render health check
+app.get('/', (req, res) => {
+  res.json({
+    message: 'Company Country ISD API',
+    endpoints: {
+      company: '/api/company?email=example@gmail.com',
+      country: '/api/country?phone=+918888888888',
+      isd: '/api/isd?country=india'
+    },
+    status: 'active'
+  });
+});
+
 // Mock database of email domains and company names
 const companyDatabase = {
   'gmail.com': 'Google',

@@ -16,7 +16,14 @@ A simple REST API service that provides three key functionalities:
 
 ## Live Demo
 
-Base URL: `[Your-Render-URL]`
+Base URL: `https://company-country-isd-api.onrender.com`
+
+Test the API:
+- [Get Company from Email](https://company-country-isd-api.onrender.com/api/company?email=example@gmail.com)
+- [Get Country from Phone](https://company-country-isd-api.onrender.com/api/country?phone=+918888888888)
+- [Get ISD Code from Country](https://company-country-isd-api.onrender.com/api/isd?country=india)
+
+Note: First request might be slow due to cold start on free tier.
 
 ## Quick Start
 
@@ -35,6 +42,12 @@ npm run dev
 ```
 
 ## API Documentation
+
+### Root Endpoint
+```http
+GET /
+```
+Returns API information and available endpoints.
 
 ### 1. Get Company Name
 ```http
@@ -99,6 +112,20 @@ npm run dev
 # Run in production mode
 npm start
 ```
+
+## Deployment
+
+This API is deployed on Render. To deploy your own instance:
+
+1. Fork this repository
+2. Sign up on [Render](https://render.com)
+3. Create a new Web Service
+4. Connect your GitHub repository
+5. Use the following settings:
+   - Environment: `Node`
+   - Build Command: `npm install`
+   - Start Command: `node src/index.js`
+   - Plan: Free
 
 ## Contributing
 
