@@ -24,13 +24,134 @@ app.get('/', (req, res) => {
 
 // Mock database of email domains and company names
 const companyDatabase = {
+  // Tech Giants
   'gmail.com': 'Google',
+  'google.com': 'Google',
+  'googlemail.com': 'Google',
   'yahoo.com': 'Yahoo',
+  'yahoo.co.uk': 'Yahoo',
+  'yahoo.co.in': 'Yahoo',
   'hotmail.com': 'Microsoft',
-  'apple.com': 'Apple Inc.',
-  'amazon.com': 'Amazon',
-  'facebook.com': 'Meta',
+  'outlook.com': 'Microsoft',
+  'live.com': 'Microsoft',
   'microsoft.com': 'Microsoft',
+  'apple.com': 'Apple Inc.',
+  'icloud.com': 'Apple Inc.',
+  'me.com': 'Apple Inc.',
+  'amazon.com': 'Amazon',
+  'amazon.co.uk': 'Amazon',
+  'amazon.in': 'Amazon',
+  'aws.amazon.com': 'Amazon Web Services',
+  'facebook.com': 'Meta',
+  'meta.com': 'Meta',
+  'fb.com': 'Meta',
+  'instagram.com': 'Meta',
+  'whatsapp.com': 'Meta',
+
+  // Social Media & Communication
+  'twitter.com': 'Twitter/X',
+  'x.com': 'Twitter/X',
+  'linkedin.com': 'LinkedIn',
+  'spotify.com': 'Spotify',
+  'netflix.com': 'Netflix',
+  'zoom.us': 'Zoom',
+  'slack.com': 'Slack',
+  'discord.com': 'Discord',
+  'telegram.org': 'Telegram',
+
+  // Cloud & Tech Companies
+  'salesforce.com': 'Salesforce',
+  'oracle.com': 'Oracle',
+  'ibm.com': 'IBM',
+  'intel.com': 'Intel',
+  'nvidia.com': 'NVIDIA',
+  'amd.com': 'AMD',
+  'cisco.com': 'Cisco',
+  'dell.com': 'Dell',
+  'hp.com': 'HP',
+  'lenovo.com': 'Lenovo',
+  'samsung.com': 'Samsung',
+  'sony.com': 'Sony',
+  'github.com': 'GitHub',
+  'gitlab.com': 'GitLab',
+  'atlassian.com': 'Atlassian',
+  'jira.com': 'Atlassian',
+
+  // E-commerce & Retail
+  'walmart.com': 'Walmart',
+  'target.com': 'Target',
+  'bestbuy.com': 'Best Buy',
+  'ebay.com': 'eBay',
+  'shopify.com': 'Shopify',
+  'alibaba.com': 'Alibaba',
+  'aliexpress.com': 'Alibaba',
+
+  // Financial Services
+  'paypal.com': 'PayPal',
+  'stripe.com': 'Stripe',
+  'jpmorgan.com': 'JPMorgan Chase',
+  'goldmansachs.com': 'Goldman Sachs',
+  'wellsfargo.com': 'Wells Fargo',
+  'mastercard.com': 'Mastercard',
+  'visa.com': 'Visa',
+
+  // Telecommunications
+  'att.com': 'AT&T',
+  'verizon.com': 'Verizon',
+  't-mobile.com': 'T-Mobile',
+  'vodafone.com': 'Vodafone',
+  'airtel.com': 'Airtel',
+  'jio.com': 'Jio',
+
+  // Media & Entertainment
+  'disney.com': 'Disney',
+  'warnerbros.com': 'Warner Bros',
+  'sony.com': 'Sony',
+  'nbc.com': 'NBC',
+  'fox.com': 'Fox',
+  'cnn.com': 'CNN',
+  'bbc.co.uk': 'BBC',
+
+  // Automotive
+  'tesla.com': 'Tesla',
+  'ford.com': 'Ford',
+  'gm.com': 'General Motors',
+  'toyota.com': 'Toyota',
+  'bmw.com': 'BMW',
+  'mercedes-benz.com': 'Mercedes-Benz',
+  'volkswagen.com': 'Volkswagen',
+
+  // Popular Indian Companies
+  'tcs.com': 'Tata Consultancy Services',
+  'infosys.com': 'Infosys',
+  'wipro.com': 'Wipro',
+  'hcl.com': 'HCL Technologies',
+  'techmahindra.com': 'Tech Mahindra',
+  'reliance.com': 'Reliance Industries',
+  'tatamotors.com': 'Tata Motors',
+  'mahindra.com': 'Mahindra Group',
+  'flipkart.com': 'Flipkart',
+  'myntra.com': 'Myntra',
+  'swiggy.com': 'Swiggy',
+  'zomato.com': 'Zomato',
+  'paytm.com': 'Paytm',
+  'phonepe.com': 'PhonePe',
+
+  // Educational Institutions (Generic)
+  'edu': 'Educational Institution',
+  'ac.uk': 'UK Academic Institution',
+  'ac.in': 'Indian Academic Institution',
+  'edu.au': 'Australian Academic Institution',
+  'edu.cn': 'Chinese Academic Institution',
+  'edu.sg': 'Singapore Academic Institution',
+
+  // Government Domains (Generic)
+  'gov': 'US Government',
+  'gov.uk': 'UK Government',
+  'gov.in': 'Indian Government',
+  'gov.au': 'Australian Government',
+  'gov.ca': 'Canadian Government',
+  'gov.sg': 'Singapore Government'
 };
 
 // Mock database of country codes and names with normalized search keys

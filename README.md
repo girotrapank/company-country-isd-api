@@ -13,6 +13,7 @@ A simple REST API service that provides three key functionalities:
 - Support for multiple country name variations
 - Comprehensive error handling
 - CORS enabled
+- Extensive company domain database
 
 ## Live Demo
 
@@ -70,13 +71,43 @@ Returns ISD code for the given country name.
 ## Supported Data
 
 ### Email Domains
-- gmail.com → Google
-- yahoo.com → Yahoo
-- hotmail.com → Microsoft
-- apple.com → Apple Inc.
-- amazon.com → Amazon
-- facebook.com → Meta
-- microsoft.com → Microsoft
+
+The API supports a wide range of email domains across different categories:
+
+#### Tech Giants & Their Services
+- Google (gmail.com, google.com, googlemail.com)
+- Microsoft (hotmail.com, outlook.com, live.com, microsoft.com)
+- Apple (apple.com, icloud.com, me.com)
+- Meta/Facebook (facebook.com, meta.com, fb.com, instagram.com, whatsapp.com)
+- Amazon (amazon.com, amazon.co.uk, amazon.in, aws.amazon.com)
+
+#### Social Media & Communication
+- Twitter/X (twitter.com, x.com)
+- LinkedIn (linkedin.com)
+- Spotify (spotify.com)
+- Netflix (netflix.com)
+- Zoom (zoom.us)
+- Slack (slack.com)
+- Discord (discord.com)
+- Telegram (telegram.org)
+
+#### Cloud & Tech Companies
+- Enterprise Software (salesforce.com, oracle.com, ibm.com)
+- Hardware Companies (intel.com, nvidia.com, amd.com, cisco.com)
+- Computer Manufacturers (dell.com, hp.com, lenovo.com)
+- Development Tools (github.com, gitlab.com, atlassian.com)
+
+#### Indian Tech Companies
+- IT Services (tcs.com, infosys.com, wipro.com, hcl.com)
+- E-commerce (flipkart.com, myntra.com)
+- Food Delivery (swiggy.com, zomato.com)
+- Digital Payments (paytm.com, phonepe.com)
+
+#### Generic Domains
+- Educational (.edu, ac.uk, ac.in, edu.au)
+- Government (.gov, gov.uk, gov.in, gov.au)
+
+For any unsupported domain, the API returns "Unknown Company".
 
 ### Countries and ISD Codes
 - United States/Canada (+1)
@@ -94,6 +125,13 @@ Returns ISD code for the given country name.
 - South Korea (+82)
 - Pakistan (+92)
 - Saudi Arabia (+966)
+
+Alternative names and common variations are supported for many countries. For example:
+- UK, Britain, Great Britain for United Kingdom
+- USA for United States
+- Deutschland for Germany
+- España for Spain
+- Brasil for Brazil
 
 ## Error Handling
 
